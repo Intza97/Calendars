@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+  <!--==================== METADATOS ====================-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Calendars">
+      <meta name="keywords" content="HTML-CSS-JS-Moment.js">
+      <meta name="author" content="Rocio Cuello">
+      
+      <!--==================== CSS ====================-->
+      <link rel="stylesheet" href="assets/css/style.css">
+
+      <!--==================== TITULO ====================-->
+      <title>Calendars | Calendario dinámico  </title>
+
+      <!--==================== ICONO DE PESTAÑA ====================-->
+      <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+
+    </head>
+
+<body>
+    <div class="root">
+        <div class="calendar" id="calendar">
+
+        </div>
+    </div>
+    <!--==================== SCRIPT ====================-->
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <script  type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        let calendar = new Calendar('calendar');
+        calendar.getElement().addEventListener('change', e => {
+            console.log(calendar.value().format('LLL'));
+        });
+    </script>
+</body>
+</html>

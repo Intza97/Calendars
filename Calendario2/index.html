@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+  <!--==================== METADATOS ====================-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="Calendars">
+      <meta name="keywords" content="HTML-CSS-JS">
+      <meta name="author" content="Rocio Cuello">
+      
+      <!--==================== CSS ====================-->
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/dycalendar.css">
+      <!--==================== TITULO ====================-->
+      <title>Calendars | Glassmorphism Calendar </title>
+
+      <!--==================== ICONO DE PESTAÑA ====================-->
+      <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+
+    </head>
+
+<body>
+    <section>
+        <div class="box">
+          <div class="container">
+            <div id="dycalendar"></div>
+          </div>
+        </div>
+      </section>
+      <!--==================== SCRIPT ====================-->
+      <script src="assets/js/dycalendar.js"></script>
+      <script>
+        dycalendar.draw({
+          target: '#dycalendar',
+          type: 'month',
+          dayformat: 'full',
+          monthformat: 'full',
+          highlighttargetdate: true,
+          prevnextbutton: 'show'
+        });
+      </script>
+</body>
+</html>
