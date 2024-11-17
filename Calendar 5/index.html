@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--==================== METADATOS ====================-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Calendars">
+    <meta name="keywords" content="HTML-CSS-JS">
+    <meta name="author" content="Rocio Cuello">
+    
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--==================== TITULO ====================-->
+    <title>Calendars | Advanced Mini Calendar</title>
+
+    <!--==================== ICONO DE PESTAÑA ====================-->
+    <link rel="icon" sizes="64x64" href="assets/img/favicon.webp"> 
+</head>
+<body>
+  <ul class="week">
+    <li>Lun</li>
+    <li>Mar</li>
+    <li>Mié</li>
+    <li>Jue</li>
+    <li>Vie</li>
+    <li>Sáb</li>
+    <li>Dom</li>
+  </ul>
+
+  <!--==================== SCRIPT ====================-->
+  <script>
+    let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto","Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    
+    let date = new Date();
+    let dayNum = date.getDay();
+    
+
+    dayNum = (dayNum === 0) ? 6 : dayNum - 1;
+    
+    let day = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+    
+    let active = document.querySelector(".week li:nth-child(" + (dayNum + 1) + ")");
+    active.classList.add('current');
+    
+    let h1 = document.createElement('h1');
+    h1.innerHTML = day;
+    active.appendChild(h1);
+    
+    let h5 = document.createElement('h5');
+    h5.innerHTML = month;
+    active.appendChild(h5);
+    
+    let h3 = document.createElement('h3');
+    h3.innerHTML = year;
+    active.appendChild(h3);
+  </script>
+</body>
+</html>
